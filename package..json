@@ -1,0 +1,11 @@
+{
+  "name": "profsfera-alice-skill",
+  "version": "1.0.0",
+  "description": "ПрофСфера — навык Яндекс Алисы",
+  "main": "alice-webhook.js",
+  "scripts": {
+    "start": "node alice-webhook.js",
+    "dev": "node --watch alice-webhook.js"
+  },
+  "engines": { "node": ">=18" }
+}
