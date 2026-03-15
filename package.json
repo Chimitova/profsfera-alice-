@@ -1,0 +1,9 @@
+{
+  "name": "profsfera-alice-skill",
+  "version": "1.0.0",
+  "main": "alice-webhook.js",
+  "scripts": {
+    "start": "node alice-webhook.js"
+  },
+  "engines": { "node": ">=18" }
+}
