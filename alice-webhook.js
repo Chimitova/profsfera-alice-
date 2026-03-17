@@ -247,7 +247,7 @@ const server = http.createServer((req, res) => {
     // в разделе: Настройки → Доступ → Добавить сайт → способ «HTML-файл».
     if (req.url === '/yandex_4ac1b2bb581d9ee8.html') {
       res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
-      res.end('<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head><body>Verification: yandex_4ac1b2bb581d9ee8</body></html>');
+      res.end('yandex_4ac1b2bb581d9ee8');
       return;
     }
 
