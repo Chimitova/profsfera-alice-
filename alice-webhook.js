@@ -238,8 +238,20 @@ const QUICK_BUTTONS = [
 ];
 
 const server = http.createServer((req, res) => {
-  // Health check
+
   if (req.method === 'GET') {
+
+    // ── Подтверждение прав Яндекс Вебмастера ──────────────────────────────
+    // Яндекс обращается к этому файлу, чтобы убедиться, что сайт ваш.
+    // Имя файла (yandex_XXXXXXXXXXXXXXXX.html) берётся из Яндекс Вебмастера
+    // в разделе: Настройки → Доступ → Добавить сайт → способ «HTML-файл».
+    if (req.url === '/yandex_4ac1b2bb581d9ee8.html') {
+      res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+      res.end('yandex_4ac1b2bb581d9ee8');
+      return;
+    }
+
+    // ── Health check — проверка работоспособности сервера ─────────────────
     res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
     res.end('ПрофСфера Alice Webhook работает ✓\n');
     return;
